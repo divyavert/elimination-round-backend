@@ -5,7 +5,9 @@ const stringify = require('csv-stringify').stringify;
 const fs = require('fs');
 const cors = require('cors');
 const { parse } = require('csv-parse');
-const PORT = process.env.PORT || 4000
+require('dotenv').config();
+
+const PORT = process.env.PORT || 4000;
 var crimeRows = [];
 app.use(cors());
 
