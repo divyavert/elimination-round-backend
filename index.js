@@ -5,6 +5,7 @@ const stringify = require('csv-stringify').stringify;
 const fs = require('fs');
 const cors = require('cors');
 const { parse } = require('csv-parse');
+const PORT = process.env.PORT || 4000
 var crimeRows = [];
 app.use(cors());
 
@@ -52,4 +53,4 @@ fs.createReadStream('./crime_data.csv')
     });
   });
 
-app.listen(4000);
+app.listen(PORT);
